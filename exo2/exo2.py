@@ -8,8 +8,16 @@ Examples:
     solution('abc', 'd') # returns false
 """
 
-"""
-Create unit test using those cases:
+
+class StringChecker:
+    def __init__(self, string, ending):
+        self.string = string
+        self.ending = ending
+
+    def solution(self):
+        return self.string.endswith(self.ending)
+
+
 fixed_tests_True = (
     ( "samurai", "ai"    ),
     ( "ninja",   "ja"    ),
@@ -27,4 +35,4 @@ fixed_tests_False = (
     ( "this",    "fails" ),
     ( "spam",    "eggs"  )
 )
-"""
+
